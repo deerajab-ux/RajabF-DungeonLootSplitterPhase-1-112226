@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fahad">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href= "css/style.css" rel= "stylesheet" type="text/css"/> 
+  <title>Dungeon loot Splitter</title>
+</head>
+
+<body>
+    <header>
+        <h1>Dungeon Loot Splitter </h1>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Party setup</h2>
+            <label for="partymembers">party members</label>
+            <input type="number" id="partymembers" name="lootName">
+        </section>
+
+        <section class="panel">
+            <h2>Add loot</h2>
+            <input type="text" id="LootName" name="lootName"
+               placeholder="enter loot name here" required>
+            <input type="number" id="lootValue" name="LootValue">
+            <button type="button" id="addlootButton">add loot</button>
+        </section>
+
+        <section class="panel">
+            <h2>Loot list</h2>
+            <button type="button" id="displaylistButton">display list </button>
+        </section>
+
+        <section class="panel">
+            <h2>Split loot</h2>
+            <button type="button" id="SplitButton">Split Loot</button>
+            <div id="TotalLoot"></div>
+            <div id="loot per party member"></div>
+        </section>
+
+        <section class="panel reflection">
+            <h2>Logic Explanation</h2>
+        </section>
+    </main>
+</body>
+</html>

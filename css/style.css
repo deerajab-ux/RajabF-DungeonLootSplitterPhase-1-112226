@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: aliceblue;
+}
+
+header {
+    color: aliceblue;
+}
+
+main {
+    color: aliceblue;
+}
+
+.panel {
+    color: aliceblue;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .reflection {
+        grid-column: span 2;
+    }
+}
