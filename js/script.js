@@ -1,6 +1,6 @@
 const loot = []
 
-const partyMembers = document.getElementById("partyMembers");
+const partyMembers = document.getElementById("partymembers");
 
 const lootName = document.getElementById("LootName");
 
@@ -12,7 +12,7 @@ const validationMessage = document.getElementById("validationMessage");
 
 const list = document.getElementById("list");
 
-const total = document.getElementById("totalLoot");
+const total = document.getElementById("TotalLoot");
 
 function addLoot()
 {
@@ -35,8 +35,8 @@ function addLoot()
     { 
     loot.push({name: itemName, value: itemValue});
     validationMessage.innerHTML = "";
-    lootName.innerHTML = "";
-    lootNumber.innerHTML = "";
+    lootName.value = "";
+    lootNumber.value = "";
     renderLoot();
     }
 };
@@ -53,7 +53,7 @@ function renderLoot()
     }
 
     total.innerHTML = totalValue;
-    list.innerHTML = lootList
+    list.innerHTML = lootList;
     
 }
 
