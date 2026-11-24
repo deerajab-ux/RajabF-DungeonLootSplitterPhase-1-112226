@@ -4,7 +4,7 @@ const partyMembers = document.getElementById("partyMembers");
 
 const lootName = document.getElementById("LootName");
 
-const lootNumber = document.getElementById("lootNumber");
+const lootNumber = document.getElementById("lootValue");
 
 const addLootButton = document.getElementById("addlootButton");
 
