@@ -2,24 +2,22 @@ const loot = []
 
 const partyMembers = document.getElementById("partyMembers");
 
-const lootName = document.getElementById("lootName");
+const lootName = document.getElementById("LootName");
 
 const lootNumber = document.getElementById("lootNumber");
 
-const addLootButton = document.getElementById("addLootButton");
+const addLootButton = document.getElementById("addlootButton");
 
 const validationMessage = document.getElementById("validationMessage");
 
 const list = document.getElementById("list");
 
-const total = document.getElementById("total");
+const total = document.getElementById("totalLoot");
 
 function addLoot()
 {
     const itemName = lootName.value;
     const itemValue = Number(lootNumber.value);
-
-
 
     if (itemName === "" )
     {
@@ -34,12 +32,13 @@ function addLoot()
         validationMessage.innerHTML = "must be a postive number";
     }
     else 
-    {
-        
-    loot.push({name: itemName, value: itemValue}) 
+    { 
+    loot.push({name: itemName, value: itemValue});
     validationMessage.innerHTML = "";
-    renderLoot()
-
+    lootName.innerHTML = "";
+    lootNumber.innerHTML = "";
+    renderLoot();
+    }
 };
 
 function renderLoot()
@@ -49,11 +48,13 @@ function renderLoot()
 
     for (let i = 0; i < loot.length; i++)
     {
-        lootList += "[" + (i + 1) + "] " + loot[i].name + " - " + loot[i].value + "-"
+        lootList += "[" + (i + 1) + "] " + loot[i].name + " - " + loot[i].value + "<br>";
         totalValue += loot[i].value;
     }
 
     total.innerHTML = totalValue;
     list.innerHTML = lootList
-    }
+    
 }
+
+addLootButton.addEventListener("click", addLoot)
