@@ -25,15 +25,18 @@
 
         <section class="panel">
             <h2>Add loot</h2>
+            <label for="LootName">LootName</label>
             <input type="text" id="LootName" name="lootName"
                placeholder="enter loot name here" required>
+            <label for="lootValue">LootValue</label>
             <input type="number" id="lootValue" name="LootValue">
             <button type="button" id="addlootButton">add loot</button>
+            <div id="validationMessage"></div>
         </section>
 
         <section class="panel">
             <h2>Loot list</h2>
-            <button type="button" id="displaylistButton">display list </button>
+            <div id="list"></div>
         </section>
 
         <section class="panel">
@@ -47,5 +50,7 @@
             <h2>Logic Explanation</h2>
         </section>
     </main>
+
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

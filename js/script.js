@@ -6,11 +6,11 @@ const lootName = document.getElementById("lootName");
 
 const lootNumber = document.getElementById("lootNumber");
 
-const addLoot = document.getElementById("addLootButton");
+const addLootButton = document.getElementById("addLootButton");
 
-const displayList = document.getElementById("displayListButton");
+const validationMessage = document.getElementById("validationMessage");
 
-const split = document.getElementById("splitButton");
+const list = document.getElementById("list");
 
 const total = document.getElementById("total");
 
@@ -18,8 +18,7 @@ function addLoot()
 {
     const itemName = lootName.value;
     const itemValue = Number(lootNumber.value);
-    let totalValue = 0;
-    let lootList = "";
+
 
 
     if (itemName === "" )
@@ -38,22 +37,23 @@ function addLoot()
     {
         
     loot.push({name: itemName, value: itemValue}) 
-
-    for (let i = 0; i < loot.length; i++)
-    {
-        lootList += "[" + (i + 1) + "] " + loot[i].name + " - " + loot[i].value + "-"
-    }
-        for (let i = 0; i < loot.length; i++)
-    {
-        totalValue += loot[i].value;
-    }
-    total.innerHTML = totalValue;
-    list.innerHTML = lootList
-    }
+    validationMessage.innerHTML = "";
+    renderLoot()
 
 };
 
 function renderLoot()
 {
-    x
+        let totalValue = 0;
+        let lootList = "";
+
+    for (let i = 0; i < loot.length; i++)
+    {
+        lootList += "[" + (i + 1) + "] " + loot[i].name + " - " + loot[i].value + "-"
+        totalValue += loot[i].value;
+    }
+
+    total.innerHTML = totalValue;
+    list.innerHTML = lootList
+    }
 }
