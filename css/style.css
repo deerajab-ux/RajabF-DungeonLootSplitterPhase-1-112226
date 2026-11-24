@@ -4,19 +4,19 @@
 }
 
 body {
-    color: aliceblue;
+    color: black;
 }
 
 header {
-    color: aliceblue;
+    color: black;
 }
 
 main {
-    color: aliceblue;
+    color: black;
 }
 
 .panel {
-    color: aliceblue;
+    color: black;
 }
 
 @media (min-width: 768px) {
